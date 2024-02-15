@@ -22,7 +22,8 @@ func _process(delta):
 	camera.rotate_y(pitch_input)
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		
+	twist_input = 0.0
+	pitch_input = 0.0
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
