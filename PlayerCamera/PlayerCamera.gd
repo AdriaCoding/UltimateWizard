@@ -6,7 +6,7 @@ var keys_sensitivity := 1
 var twist_input := 0.0
 var pitch_input := 0.0
 
-@onready var camera = $GodCamera
+#@onready var camera = $GodCamera
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -16,10 +16,10 @@ func _process(delta):
 	var input:= Vector3.ZERO
 	input.z = Input.get_axis("ui_up", "ui_down")
 	input.x = Input.get_axis("ui_left", "ui_right")
-	var base = camera.basis
+	var base = basis
 	translate(base * input * keys_sensitivity * delta)
-	camera.rotate_x(twist_input)
-	camera.rotate_y(pitch_input)
+	rotate_z(twist_input)
+	rotate_x(pitch_input)
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	twist_input = 0.0
