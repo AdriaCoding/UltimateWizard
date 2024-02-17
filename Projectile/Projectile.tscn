@@ -15,6 +15,8 @@ points = PackedVector3Array(0.457871, 0.198079, 0.0157824, -0.48874, -0.0916874,
 [node name="Node3D" type="Node3D"]
 
 [node name="Projectile" type="RigidBody3D" parent="."]
+gravity_scale = 0.0
+linear_velocity = Vector3(10, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Projectile"]
 mesh = SubResource("SphereMesh_wja51")
