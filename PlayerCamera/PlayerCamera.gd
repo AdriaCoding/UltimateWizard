@@ -1,7 +1,7 @@
 extends Node3D
 
 var mouse_sensitivity := 0.001
-var keys_sensitivity := 1
+var keys_sensitivity := 5
 
 var twist_input := 0.0
 var pitch_input := 0.0
