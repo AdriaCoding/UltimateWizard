@@ -15,11 +15,10 @@ func _process(delta):
 		cast_spell()
 		cooldown = 3
 	
-func cast_spell():
+func cast_spell():	
 	var Spell = ProjectilePath.instantiate()
 	Spell.position = $SpawnPosition.position
 	Spell.velocity = $SpawnPosition.global_position - get_global_position()
-	print($SpawnPosition.global_position, get_global_position())
 	add_child(Spell)
 	
 	
